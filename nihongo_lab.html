@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nihongo Lab — Ruang Latihan Bahasa Jepang</title>
+<style>
+:root{--bg:#f5f7fb;--ink:#182235;--muted:#68758b;--primary:#5147e8;--primary2:#766df5;--line:#e5e9f2;--white:#fff;--green:#12845b;--orange:#d97706;--shadow:0 14px 40px rgba(31,43,80,.08)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 16px;font-weight:700;transition:.18s}button:hover{transform:translateY(-1px)}.primary{background:var(--primary);color:white}.secondary{background:#eeedff;color:var(--primary)}.plain{background:white;border:1px solid var(--line);color:var(--ink)}.danger{background:#fff0f0;color:#b42318}.topbar{height:76px;background:#ffffffdf;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100vw - 1180px)/2));position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:11px;font-weight:850;font-size:19px;letter-spacing:-.4px}.logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--primary),#a29cff);color:white;display:grid;place-items:center;font-size:22px}.nav{display:flex;gap:8px;align-items:center}.nav button{background:transparent;color:var(--muted);padding:9px 12px}.nav button:hover{background:#f0f0ff;color:var(--primary)}main{max-width:1180px;margin:auto;padding:30px 22px 70px}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:40px 0 48px}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #dedcff;background:#f0efff;color:var(--primary);padding:6px 11px;border-radius:99px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.7px}.hero h1{font-size:clamp(36px,5vw,60px);line-height:1.06;letter-spacing:-2px;margin:20px 0 18px}.gradient{color:var(--primary)}.hero p{font-size:17px;color:var(--muted);max-width:660px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero-art{min-height:330px;border-radius:30px;background:linear-gradient(145deg,#e9e8ff,#fff 58%,#ffe7e9);display:grid;place-items:center;position:relative;overflow:hidden;border:1px solid #e5e2ff}.sun{font-size:140px;filter:drop-shadow(0 12px 12px #9d8edb33)}.float{position:absolute;background:white;border:1px solid #eeedf8;border-radius:16px;padding:12px 15px;box-shadow:var(--shadow);font-weight:750}.float.one{top:34px;left:22px}.float.two{bottom:28px;right:18px}.float.three{bottom:82px;left:20px;color:var(--primary)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:25px 0 18px}.section-head h2{margin:0;font-size:27px;letter-spacing:-.8px}.section-head p{margin:5px 0 0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 5px 18px #1e2c4d05}.card h3{margin:12px 0 7px}.card p{color:var(--muted);margin:0}.iconbox{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:#f0efff;font-size:24px}.pill{font-size:12px;padding:5px 9px;border-radius:99px;background:#edf8f3;color:var(--green);font-weight:800}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 38px}.feature{background:white;border:1px solid var(--line);padding:17px;border-radius:16px}.feature strong{display:block;font-size:15px}.feature span{font-size:13px;color:var(--muted)}.panel{background:white;border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:var(--shadow);margin-top:22px}.panel h2,.panel h3{margin-top:0}.hidden{display:none!important}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-weight:750;font-size:13px}.field input,.field select{width:100%;padding:12px 13px;border:1px solid #dfe4ef;border-radius:11px;background:white;outline:none}.field input:focus,.field select:focus{border-color:var(--primary);box-shadow:0 0 0 3px #5147e81a}.full{grid-column:1/-1}.muted{color:var(--muted)}.notice{background:#fff8e8;border:1px solid #f4dfb2;color:#805c16;padding:12px 14px;border-radius:12px;font-size:13px;margin:14px 0}.statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.stat{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fbfcff}.stat small{color:var(--muted)}.stat strong{display:block;font-size:25px;margin-top:5px}.room-head{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:560px}th,td{text-align:left;padding:13px 11px;border-bottom:1px solid var(--line);font-size:14px}th{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}.status{display:inline-block;padding:4px 8px;border-radius:99px;font-size:12px;font-weight:800;background:#eef2f7;color:#536176}.status.ready{background:#e7f8ef;color:#16764e}.status.live{background:#fff2db;color:#a55a00}.question{border:1px solid var(--line);border-radius:17px;padding:20px;margin:14px 0}.question h3{margin:0 0 15px}.answers{display:grid;gap:9px}.answer{display:flex;gap:10px;align-items:center;border:1px solid var(--line);padding:12px;border-radius:12px;cursor:pointer}.answer:has(input:checked){border-color:var(--primary);background:#f5f4ff}.answer input{accent-color:var(--primary)}.progress{height:8px;background:#eceef5;border-radius:99px;overflow:hidden}.progress div{height:100%;background:var(--primary);width:0%;transition:width .2s}.toast{position:fixed;bottom:20px;right:20px;background:#202943;color:white;padding:13px 17px;border-radius:12px;box-shadow:var(--shadow);z-index:20;max-width:340px}.footer{border-top:1px solid var(--line);padding:25px 22px;text-align:center;color:var(--muted);font-size:13px}.section-label{font-size:12px;color:var(--muted);font-weight:800;letter-spacing:1px;text-transform:uppercase}.tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.tag{font-size:12px;border:1px solid var(--line);padding:5px 9px;border-radius:99px;color:#59667a;background:#fafbfe}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:25px}.hero-art{min-height:260px}.grid{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr 1fr}.statrow{grid-template-columns:1fr 1fr}.nav button[data-hide-mobile]{display:none}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.topbar{padding:0 16px}main{padding:22px 16px 50px}}
+@media(max-width:500px){.grid{grid-template-columns:1fr}.hero h1{letter-spacing:-1.2px}.brand{font-size:16px}.logo{width:35px;height:35px}.nav{gap:0}.nav button{padding:8px}.panel{padding:18px}.section-head{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">日</div><span>Nihongo Lab</span></div>
+  <nav class="nav">
+    <button onclick="showPage('home')">Beranda</button>
+    <button data-hide-mobile onclick="showPage('student')">Masuk Siswa</button>
+    <button class="primary" style="color:white;background:var(--primary)" onclick="showPage('adminLogin')">Login Admin</button>
+  </nav>
+</header>
+<main>
+<section id="homePage">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">✦ Belajar · Berlatih · Berkembang</span>
+      <h1>Mulai perjalananmu bersama <span class="gradient">bahasa Jepang.</span></h1>
+      <p>Nihongo Lab adalah ruang latihan bahasa Jepang untuk membantu siswa membangun kosakata, memahami pola kalimat, dan mengukur kemampuan melalui tes yang terarah. Belajar sedikit demi sedikit, lalu lihat perkembanganmu.</p>
+      <div class="hero-actions"><button class="primary" onclick="showPage('student')">Gabung sebagai siswa →</button><button class="secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Kenali Nihongo Lab</button></div>
+      <div class="tagrow"><span class="tag">Kotoba</span><span class="tag">Kata sifat</span><span class="tag">Kata kerja</span><span class="tag">Kikan & waktu</span></div>
+    </div>
+    <div class="hero-art"><div class="sun">🇯🇵</div><div class="float one">こんにちは！</div><div class="float two">今日も頑張ろう ✨</div><div class="float three">📚 Belajar aktif</div></div>
+  </div>
+  <div id="about" class="section-head"><div><span class="section-label">Tentang pembelajaran</span><h2>Apa itu Nihongo?</h2><p>Mengenal bahasa, budaya, dan cara belajar yang konsisten.</p></div></div>
+  <div class="grid">
+    <article class="card"><div class="iconbox">あ</div><h3>Bahasa Jepang (日本語)</h3><p>Nihongo adalah bahasa Jepang. Pembelajarannya mencakup sistem tulisan hiragana, katakana, kanji, kosakata, tata bahasa, menyimak, berbicara, membaca, dan menulis.</p></article>
+    <article class="card"><div class="iconbox">🌏</div><h3>Mengapa belajar bahasa asing?</h3><p>Bahasa asing membantu kita berkomunikasi dengan lebih banyak orang, memahami budaya lain, membuka peluang pendidikan dan karier, serta melatih cara berpikir.</p></article>
+    <article class="card"><div class="iconbox">🎯</div><h3>Tujuan Nihongo Lab</h3><p>Menyediakan latihan yang terstruktur, evaluasi yang jelas, dan pemantauan guru agar siswa tahu materi yang sudah dikuasai dan yang perlu dipelajari lagi.</p></article>
+  </div>
+  <div class="section-head"><div><h2>Yang bisa kamu latih</h2><p>Pilih materi sesuai tujuan dan tingkat kemampuanmu.</p></div></div>
+  <div class="features">
+    <div class="feature"><strong>🈁 Kotoba</strong><span>Kosakata sehari-hari</span></div>
+    <div class="feature"><strong>🎨 Kata sifat</strong><span>い-adjective dan な-adjective</span></div>
+    <div class="feature"><strong>🏃 Kata kerja</strong><span>Bentuk dan penggunaan verba</span></div>
+    <div class="feature"><strong>🕒 Kikan & waktu</strong><span>Jam, hari, tanggal, durasi</span></div>
+  </div>
+  <div class="panel"><div class="room-head"><div><span class="section-label">Untuk kelas dan pelatihan</span><h2 style="margin:5px 0">Latihan bersama, dipantau guru</h2><p class="muted" style="margin:0">Guru mengatur tes dan kode room. Siswa bergabung lebih dulu, lalu tes dimulai saat admin menekan tombol Start.</p></div><button class="primary" onclick="showPage('student')">Masuk room siswa</button></div></div>
+</section>
+
+<section id="adminLoginPage" class="hidden">
+  <div class="panel" style="max-width:570px;margin:30px auto">
+    <span class="section-label">Area pengelola</span><h2>Login Admin</h2><p class="muted">Masukkan PIN admin untuk mengatur room, materi, durasi, tingkat kesulitan, dan memantau hasil latihan.</p>
+    <div class="field"><label for="adminPin">PIN Admin</label><input id="adminPin" type="password" inputmode="numeric" placeholder="Masukkan PIN admin"></div>
+    <div class="notice">Demo ini memakai PIN awal <b>2468</b>. Ganti PIN di panel admin setelah masuk. PIN dalam HTML demo bukan keamanan sungguhan.</div>
+    <button class="primary" style="width:100%" onclick="adminLogin()">Masuk ke dashboard</button>
+    <p class="muted" style="font-size:13px">Untuk kembali, <a href="#" onclick="showPage('home');return false">buka beranda</a>.</p>
+  </div>
+</section>
+
+<section id="studentPage" class="hidden">
+  <div class="panel" style="max-width:740px;margin:20px auto">
+    <span class="section-label">Ruang peserta</span><h2>Gabung sesi latihan</h2><p class="muted">Masukkan nama dan kode room yang diberikan guru. Setelah berhasil bergabung, tunggu sampai admin memulai tes.</p>
+    <div class="formgrid">
+      <div class="field"><label for="studentName">Nama siswa</label><input id="studentName" placeholder="Contoh: Andi"></div>
+      <div class="field"><label for="roomCode">Kode room</label><input id="roomCode" placeholder="Contoh: JP2026" style="text-transform:uppercase"></div>
+      <div class="field full"><button class="primary" onclick="joinRoom()">Gabung ke room →</button></div>
+    </div>
+    <div id="studentJoinMessage" class="notice hidden"></div>
+  </div>
+  <div id="studentWaiting" class="panel hidden" style="max-width:740px;margin:20px auto">
+    <div class="room-head"><div><span class="section-label">Status peserta</span><h2 id="studentWelcome">Selamat datang</h2><p class="muted" id="studentRoomText"></p></div><span id="studentStatus" class="status ready">Menunggu Start</span></div>
+    <div id="waitingContent"><div class="notice">Kamu sudah masuk room. Siapkan diri dan tunggu instruksi guru. Tes akan muncul saat admin menekan tombol Start.</div></div>
+    <div id="testArea" class="hidden"></div>
+  </div>
+</section>
+
+<section id="adminPage" class="hidden">
+  <div class="room-head" style="margin:15px 0 20px"><div><span class="section-label">Dashboard pengajar</span><h1 style="margin:4px 0;font-size:34px">Kontrol sesi latihan</h1><p class="muted" style="margin:0">Atur tes, kelola peserta, dan pantau skor pada demo ini.</p></div><button class="plain" onclick="adminLogout()">Keluar</button></div>
+  <div class="statrow">
+    <div class="stat"><small>Peserta bergabung</small><strong id="statParticipants">0</strong></div>
+    <div class="stat"><small>Status sesi</small><strong id="statStatus" style="font-size:19px">Belum mulai</strong></div>
+    <div class="stat"><small>Materi tes</small><strong id="statMaterial" style="font-size:19px">Kotoba</strong></div>
+    <div class="stat"><small>Durasi</small><strong id="statDuration">5 mnt</strong></div>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+    <div class="panel" style="margin:0">
+      <h2>⚙️ Pengaturan tes</h2>
+      <div class="formgrid">
+        <div class="field full"><label for="testTitle">Nama sesi</label><input id="testTitle" value="Latihan Nihongo"></div>
+        <div class="field"><label for="testMaterial">Jenis tes</label><select id="testMaterial"><option>Kotoba</option><option>Kata sifat</option><option>Kata kerja</option><option>Kikan & waktu</option><option>Campuran</option></select></div>
+        <div class="field"><label for="testLevel">Tingkat kesulitan</label><select id="testLevel"><option>Pemula</option><option>Menengah</option><option>Lanjutan</option></select></div>
+        <div class="field"><label for="testDuration">Durasi</label><select id="testDuration"><option value="1">1 menit (demo)</option><option value="5" selected>5 menit</option><option value="10">10 menit</option><option value="15">15 menit</option><option value="20">20 menit</option><option value="30">30 menit</option><option value="45">45 menit</option><option value="60">60 menit</option></select></div>
+        <div class="field"><label for="testCount">Jumlah soal</label><select id="testCount"><option value="5">5 soal</option><option value="10" selected>10 soal</option><option value="15">15 soal</option><option value="20">20 soal</option></select></div>
+        <div class="field full"><label for="roomCodeAdmin">Kode room siswa</label><input id="roomCodeAdmin" value="JP2026" maxlength="12" style="text-transform:uppercase"></div>
+        <div class="field full"><label for="newAdminPin">Ganti PIN admin (opsional)</label><input id="newAdminPin" type="password" inputmode="numeric" placeholder="Isi jika ingin mengganti PIN"></div>
+      </div>
+      <div class="notice">Mengubah pengaturan setelah tes dimulai tidak mengubah tes yang sedang berjalan. PIN demo hanya tersimpan di browser ini.</div>
+      <div class="hero-actions"><button class="secondary" onclick="saveSettings()">Simpan pengaturan</button><button class="primary" id="startButton" onclick="startTest()">▶ Start tes</button><button class="danger" onclick="resetRoom()">Reset room</button></div>
+    </div>
+    <div class="panel" style="margin:0">
+      <div class="room-head"><div><h2>👥 Room peserta</h2><p class="muted" style="margin:0">Daftar siswa yang sudah bergabung.</p></div><span class="pill" id="roomCodeLabel">JP2026</span></div>
+      <div id="participantList" style="margin-top:18px"><p class="muted">Belum ada peserta. Siswa dapat bergabung menggunakan kode room.</p></div>
+      <div class="notice">Tombol Start hanya tersedia pada panel admin. Dalam versi demo, peserta yang bergabung pada browser yang sama akan terlihat di sini.</div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="room-head"><div><h2>📊 Pemantauan skor</h2><p class="muted" style="margin:0">Skor dan progres akan diperbarui ketika jawaban peserta dinilai.</p></div><span class="status live" id="liveStatus">Menunggu peserta</span></div>
+    <div class="tablewrap" style="margin-top:15px"><table><thead><tr><th>Nama siswa</th><th>Status</th><th>Progres</th><th>Skor</th><th>Waktu tersisa</th></tr></thead><tbody id="scoreTable"><tr><td colspan="5" class="muted">Belum ada data peserta.</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="resultPage" class="hidden">
+  <div class="panel" style="max-width:700px;margin:30px auto;text-align:center">
+    <div style="font-size:55px">🎉</div><span class="section-label">Tes selesai</span><h1 style="margin:8px 0">お疲れさまでした！</h1><p class="muted">Terima kasih sudah berlatih. Berikut hasil tes kamu.</p>
+    <div class="statrow" style="grid-template-columns:repeat(2,1fr)"><div class="stat"><small>Skor akhir</small><strong id="finalScore">0</strong></div><div class="stat"><small>Jawaban benar</small><strong id="finalCorrect">0/0</strong></div></div>
+    <button class="primary" onclick="showPage('home')">Kembali ke beranda</button>
+  </div>
+</section>
+</main>
+<footer class="footer">Nihongo Lab · Ruang latihan bahasa Jepang · Belajar konsisten, berkembang bersama.</footer>
+<div id="toast" class="toast hidden"></div>
+<script>
+const $ = id => document.getElementById(id);
+let adminPin = '2468';
+let settings = {title:'Latihan Nihongo',material:'Kotoba',level:'Pemula',duration:5,count:10,code:'JP2026'};
+let participants = [];
+let currentStudentId = null;
+let sessionStarted = false;
+let sessionEnd = 0;
+let timerInterval = null;
+let testQuestions = [];
+const questionBank = [
+ {type:'Kotoba',level:'Pemula',q:'Apa arti 「みず」 (mizu)?',a:['Air','Api','Buku','Sekolah'],correct:0},
+ {type:'Kotoba',level:'Pemula',q:'Apa arti 「ねこ」 (neko)?',a:['Anjing','Kucing','Burung','Ikan'],correct:1},
+ {type:'Kotoba',level:'Pemula',q:'Apa arti 「ほん」 (hon)?',a:['Meja','Tas','Buku','Pintu'],correct:2},
+ {type:'Kotoba',level:'Pemula',q:'「ありがとう」 berarti…',a:['Maaf','Terima kasih','Selamat pagi','Permisi'],correct:1},
+ {type:'Kotoba',level:'Pemula',q:'Apa arti 「がっこう」 (gakkou)?',a:['Rumah sakit','Stasiun','Sekolah','Toko'],correct:2},
+ {type:'Kata sifat',level:'Pemula',q:'「あつい」 (atsui) dapat berarti…',a:['Panas','Dingin','Kecil','Mahal'],correct:0},
+ {type:'Kata sifat',level:'Pemula',q:'Pilih kata sifat -な.',a:['たかい','おもしろい','しずか','おいしい'],correct:2},
+ {type:'Kata sifat',level:'Pemula',q:'「おいしい」 berarti…',a:['Enak','Cepat','Lambat','Baru'],correct:0},
+ {type:'Kata kerja',level:'Pemula',q:'「たべます」 (tabemasu) berarti…',a:['Minum','Makan','Tidur','Pergi'],correct:1},
+ {type:'Kata kerja',level:'Pemula',q:'「いきます」 (ikimasu) berarti…',a:['Datang','Pulang','Pergi','Melihat'],correct:2},
+ {type:'Kata kerja',level:'Pemula',q:'Bentuk kamus dari 「のみます」 adalah…',a:['のむ','のま','のみる','のんだ'],correct:0},
+ {type:'Kikan & waktu',level:'Pemula',q:'「いま なんじですか」 artinya…',a:['Hari apa sekarang?','Sekarang jam berapa?','Kamu di mana?','Siapa namamu?'],correct:1},
+ {type:'Kikan & waktu',level:'Pemula',q:'「きょう」 berarti…',a:['Kemarin','Besok','Hari ini','Minggu depan'],correct:2},
+ {type:'Kikan & waktu',level:'Pemula',q:'Jam 2 dalam bahasa Jepang adalah…',a:['いちじ','にじ','さんじ','よじ'],correct:1},
+ {type:'Kikan & waktu',level:'Pemula',q:'「いっしゅうかん」 berarti…',a:['Satu hari','Satu bulan','Satu minggu','Satu tahun'],correct:2},
+ {type:'Kotoba',level:'Menengah',q:'「図書館」 (としょかん) berarti…',a:['Perpustakaan','Kantor pos','Bandara','Restoran'],correct:0},
+ {type:'Kata kerja',level:'Menengah',q:'Bentuk て dari 「かきます」 adalah…',a:['かいて','かって','かきて','かいた'],correct:0},
+ {type:'Kata sifat',level:'Menengah',q:'Bentuk negatif lampau dari 「たかい」 adalah…',a:['たかくない','たかかった','たかくなかった','たかいじゃない'],correct:2},
+ {type:'Kikan & waktu',level:'Menengah',q:'「らいしゅう」 berarti…',a:['Minggu lalu','Minggu depan','Setiap minggu','Minggu ini'],correct:1},
+ {type:'Kotoba',level:'Lanjutan',q:'「経験」 (けいけん) berarti…',a:['Pengalaman','Kesempatan','Persiapan','Hubungan'],correct:0}
+];
+function showPage(page){
+ ['homePage','adminLoginPage','studentPage','adminPage','resultPage'].forEach(id=>$(id).classList.add('hidden'));
+ const map={home:'homePage',adminLogin:'adminLoginPage',student:'studentPage',admin:'adminPage',result:'resultPage'};
+ $(map[page]).classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+ if(page==='admin') renderAdmin();
+}
+function toast(msg){$('toast').textContent=msg;$('toast').classList.remove('hidden');setTimeout(()=>$('toast').classList.add('hidden'),2800)}
+function adminLogin(){if($('adminPin').value===adminPin){$('adminPin').value='';showPage('admin')}else toast('PIN admin salah. Coba lagi.')}
+function adminLogout(){showPage('home')}
+function saveSettings(){
+ settings={title:$('testTitle').value.trim()||'Latihan Nihongo',material:$('testMaterial').value,level:$('testLevel').value,duration:Number($('testDuration').value),count:Number($('testCount').value),code:$('roomCodeAdmin').value.trim().toUpperCase()||'JP2026'};
+ if($('newAdminPin').value.trim()){adminPin=$('newAdminPin').value.trim();$('newAdminPin').value='';toast('PIN admin diperbarui untuk sesi browser ini.')}
+ $('roomCodeAdmin').value=settings.code;renderAdmin();toast('Pengaturan tes disimpan.');
+}
+function joinRoom(){
+ const name=$('studentName').value.trim(),code=$('roomCode').value.trim().toUpperCase();
+ if(!name||!code){toast('Isi nama siswa dan kode room terlebih dahulu.');return}
+ if(code!==settings.code){$('studentJoinMessage').textContent='Kode room tidak cocok. Periksa kembali kode yang diberikan guru.';$('studentJoinMessage').classList.remove('hidden');return}
+ let p=participants.find(x=>x.name.toLowerCase()===name.toLowerCase());
+ if(!p){p={id:'p'+Date.now()+Math.random().toString(16).slice(2,6),name,status:sessionStarted?'Tes berlangsung':'Menunggu Start',answers:{},score:0,submitted:false,joinedAt:Date.now()};participants.push(p)}
+ currentStudentId=p.id;
+ $('studentJoinMessage').classList.add('hidden');$('studentWaiting').classList.remove('hidden');$('studentWelcome').textContent='Halo, '+p.name+'!';$('studentRoomText').textContent='Room '+settings.code+' · '+settings.title;
+ renderAdmin();showPage('student');
+ if(sessionStarted)renderTestForStudent(p);
+}
+function getQuestions(){
+ let bank=questionBank.filter(q=>(settings.material==='Campuran'||q.type===settings.material)&&(settings.level==='Pemula'||q.level===settings.level||settings.level==='Lanjutan'));
+ if(bank.length<settings.count)bank=bank.concat(questionBank.filter(q=>!bank.includes(q)));
+ // Shuffle copy for variety
+ bank=bank.slice().sort(()=>Math.random()-.5);
+ return bank.slice(0,Math.min(settings.count,bank.length));
+}
+function startTest(){
+ if(!participants.length){toast('Belum ada siswa di room. Minta siswa bergabung dahulu.');return}
+ saveSettings();
+ testQuestions=getQuestions();sessionStarted=true;sessionEnd=Date.now()+settings.duration*60000;
+ participants.forEach(p=>{p.status='Tes berlangsung';p.answers={};p.score=0;p.submitted=false;p.questions=testQuestions.map(q=>({...q,a:[...q.a]}));p.endAt=sessionEnd});
+ if(timerInterval)clearInterval(timerInterval);
+ timerInterval=setInterval(()=>{if(Date.now()>=sessionEnd){finishAll();}else renderAdmin()},1000);
+ renderAdmin();toast('Tes dimulai! Siswa dapat mengerjakan sekarang.');
+ if(currentStudentId){let p=participants.find(x=>x.id===currentStudentId);if(p)renderTestForStudent(p)}
+}
+function renderTestForStudent(p){
+ $('studentStatus').textContent=p.submitted?'Selesai':'Tes berlangsung';$('studentStatus').className='status '+(p.submitted?'ready':'live');
+ $('waitingContent').classList.add('hidden');$('testArea').classList.remove('hidden');
+ if(p.submitted){$('testArea').innerHTML='<div class="notice">Jawaban sudah dikirim. Skor kamu: <b>'+p.score+'</b>/100. Tunggu arahan guru.</div>';return}
+ const qs=p.questions||testQuestions;
+ $('testArea').innerHTML=`<div class="room-head"><div><span class="section-label">${esc(settings.material)} · ${esc(settings.level)}</span><h2>${esc(settings.title)}</h2><p class="muted">Pilih satu jawaban terbaik untuk setiap soal.</p></div><span class="pill" id="studentTimer">Sisa waktu: ${Math.max(0,Math.ceil((sessionEnd-Date.now())/60000))} mnt</span></div><div class="progress"><div id="studentProgress" style="width:${Object.keys(p.answers).length/qs.length*100}%"></div></div><p class="muted" id="answerProgress">${Object.keys(p.answers).length} dari ${qs.length} dijawab</p><form id="quizForm">${qs.map((q,i)=>`<div class="question"><h3>${i+1}. ${esc(q.q)}</h3><div class="answers">${q.a.map((a,j)=>`<label class="answer"><input type="radio" name="q${i}" value="${j}" ${p.answers[i]===j?'checked':''} onchange="answerQuestion('${p.id}',${i},${j})"><span>${esc(a)}</span></label>`).join('')}</div></div>`).join('')}<button class="primary" type="button" onclick="submitTest('${p.id}')">Kirim jawaban</button></form>`;
+}
+function answerQuestion(pid,qi,ai){const p=participants.find(x=>x.id===pid);if(!p||p.submitted)return;p.answers[qi]=ai;const count=Object.keys(p.answers).length;const progress=$('studentProgress');if(progress)progress.style.width=count/p.questions.length*100+'%';const ap=$('answerProgress');if(ap)ap.textContent=count+' dari '+p.questions.length+' dijawab';p.score=calcScore(p);renderAdmin()}
+function calcScore(p){const qs=p.questions||[];if(!qs.length)return 0;let correct=0;qs.forEach((q,i)=>{if(p.answers[i]===q.correct)correct++});return Math.round(correct/qs.length*100)}
+function submitTest(pid){const p=participants.find(x=>x.id===pid);if(!p||p.submitted)return;p.score=calcScore(p);p.submitted=true;p.status='Selesai';p.finishedAt=Date.now();renderAdmin();renderTestForStudent(p);toast('Jawaban berhasil dikirim.')}
+function finishAll(){if(timerInterval){clearInterval(timerInterval);timerInterval=null}participants.forEach(p=>{if(!p.submitted){p.score=calcScore(p);p.submitted=true;p.status='Waktu habis';p.finishedAt=Date.now()}});renderAdmin();if(currentStudentId){const p=participants.find(x=>x.id===currentStudentId);if(p)renderTestForStudent(p)}toast('Waktu tes berakhir.')}
+function resetRoom(){if(!confirm('Reset room? Semua peserta dan hasil pada demo ini akan dihapus.'))return;participants=[];sessionStarted=false;sessionEnd=0;testQuestions=[];currentStudentId=null;if(timerInterval)clearInterval(timerInterval);timerInterval=null;$('studentWaiting').classList.add('hidden');$('testArea').classList.add('hidden');$('waitingContent').classList.remove('hidden');renderAdmin();toast('Room direset.')}
+function renderAdmin(){
+ $('statParticipants').textContent=participants.length;$('statStatus').textContent=sessionStarted?'Berlangsung':'Belum mulai';$('statMaterial').textContent=settings.material;$('statDuration').textContent=settings.duration+' mnt';$('roomCodeLabel').textContent=settings.code;
+ $('liveStatus').textContent=sessionStarted?'Pemantauan aktif':'Menunggu peserta';
+ const list=$('participantList');
+ if(!participants.length)list.innerHTML='<p class="muted">Belum ada peserta. Siswa dapat bergabung menggunakan kode room.</p>';
+ else list.innerHTML=participants.map(p=>`<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)"><div><b>${esc(p.name)}</b><div class="muted" style="font-size:12px">${p.submitted?'Skor '+p.score+'/100':(p.status||'Menunggu Start')}</div></div><span class="status ${p.submitted?'ready':sessionStarted?'live':'ready'}">${p.submitted?'Selesai':sessionStarted?'Mengerjakan':'Siap'}</span></div>`).join('');
+ const tbody=$('scoreTable');
+ if(!participants.length)tbody.innerHTML='<tr><td colspan="5" class="muted">Belum ada data peserta.</td></tr>';
+ else tbody.innerHTML=participants.map(p=>{const total=(p.questions||testQuestions).length||settings.count;const done=Object.keys(p.answers||{}).length;const score=p.submitted||sessionStarted?calcScore(p):0;const remain=p.submitted?'—':sessionStarted?formatTime(Math.max(0,Math.ceil((sessionEnd-Date.now())/1000))):'—';return `<tr><td><b>${esc(p.name)}</b></td><td><span class="status ${p.submitted?'ready':sessionStarted?'live':''}">${esc(p.status||'Menunggu Start')}</span></td><td>${done}/${total} <div class="progress" style="margin-top:6px;max-width:120px"><div style="width:${Math.min(100,done/total*100)}%"></div></div></td><td><b>${score}/100</b></td><td>${remain}</td></tr>`}).join('');
+ $('startButton').textContent=sessionStarted?'↻ Tes sedang berlangsung':'▶ Start tes';
+}
+function formatTime(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+</script>
+</body>
+</html>
